@@ -1,0 +1,9 @@
+{
+    "clipboard": "terminal",
+    "diffgutter": true,
+    "hltaberrors": true,
+    "hltrailingws": true,
+    "paste": true,
+    "smartpaste": false,
+    "tabstospaces": true
+}

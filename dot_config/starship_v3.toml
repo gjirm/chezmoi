@@ -1,0 +1,203 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+palette = "catppuccin_mocha"
+format = """
+$shlvl\
+($username\
+$hostname) \
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$git_metrics\
+$env_var\
+$cmd_duration\
+
+$fill\
+
+$aws\
+$azure\
+$terraform\
+$golang\
+$docker_context\
+$package\
+$mise\
+$time\
+$battery\
+$line_break\
+$jobs\
+$status\
+$os\
+$shell\
+$character"""
+
+add_newline = true
+
+scan_timeout = 100
+command_timeout = 1500
+
+[fill]
+symbol = " "
+
+[os]
+format = "[](fg:jirm-blue)[$symbol ]($style)"
+style = "bold fg:white bg:jirm-blue"
+disabled = false
+
+[os.symbols]
+Alpaquita = "🔔"
+Alpine = ""
+Amazon = "🙂"
+Android = "🤖"
+Arch = "🎗️"
+Artix = "🎗️"
+CentOS = "💠"
+Debian = ""
+DragonFly = "🐉"
+Emscripten = "🔗"
+EndeavourOS = "🚀"
+Fedora = "🎩"
+FreeBSD = "😈"
+Garuda = "🦅"
+Gentoo = "🗜️"
+HardenedBSD = "🛡️"
+Illumos = "🐦"
+Linux = "🐧"
+Mabox = "📦"
+Macos = "🍎"
+Manjaro = "🥭"
+Mariner = "🌊"
+MidnightBSD = "🌘"
+Mint = "🌿"
+NetBSD = "🚩"
+NixOS = "❄️"
+OpenBSD = "🐡"
+OpenCloudOS = "☁️"
+openEuler = "🦉"
+openSUSE = "🦎"
+OracleLinux = "🦴"
+Pop = "🍭"
+Raspbian = "🍓"
+Redhat = "🎩"
+RedHatEnterprise = "🎩"
+Redox = "🧪"
+Solus = "⛵"
+SUSE = "🦎"
+#Ubuntu = "🎯"
+Ubuntu = ""
+Unknown = "❓"
+#Windows = "🪟 "
+#Windows = ""
+Windows = "󰖳"
+
+[shell]
+format = "[$indicator]($style)[](fg:jirm-blue)"
+style = "fg:white bg:jirm-blue"
+# powershell_indicator = "_"
+disabled = false
+
+[username]
+format = "[$user]($style)"
+style_user = "bold fg:green"
+style_root = "bold fg:maroon"
+show_always = false
+
+[hostname]
+format = "[@$hostname]($style)"
+style = "bold fg:green"
+ssh_only = true
+
+[directory]
+truncation_length = 8
+truncation_symbol = "../"
+style = "sky"
+
+[git_branch]
+symbol = " "
+style = "bold fg:mauve"
+format = " [$symbol$branch]($style) "
+
+[git_status]
+format = '[($all_status$ahead_behind)]($style) '
+ahead = "[⇡${count}](bold fg:43)"
+diverged = "[⇕](bold fg:yellow)[⇡${ahead_count}](bold fg:43)[⇣${behind_count}](bold fg:214)"
+behind = "[⇣${count}](bold fg:214)"
+untracked = "[?${count}](bold fg:202)"
+modified = "!${count}"
+conflicted = "[=${count}](bold fg:red)"
+stashed = "$${count}"
+staged = "[+${count}](bold fg:green)"
+renamed = "»${count}"
+deleted = "[✘${count}](bold fg:red)"
+style = "bold fg:yellow"
+windows_starship = '/mnt/c/Program Files/starship/bin/starship.exe'
+
+[git_metrics]
+added_style = "bold green"
+deleted_style = "bold red"
+disabled = false
+
+[aws]
+format = '[$symbol$profile]($style) '
+style = 'fg:peach '
+symbol = "󰖐"
+
+[azure]
+disabled = false
+format = '[$symbol$username]($style) '
+symbol = '󰠅'
+style = 'fg:sapphire'
+
+[terraform]
+format = "[$symbol($version/)$workspace]($style) "
+symbol = '󱁢'
+style = "fg:blue"
+
+[golang]
+format = '[$symbol$version]($style) '
+symbol = ''
+
+[mise]
+disabled = false
+symbol = ''
+
+[time]
+disabled = true
+format = '[🕙$time]($style)'
+time_format = "%T"
+style = "fg:text"
+# utc_time_offset = "-5"
+# time_range = "10:00:00-14:00:00"
+
+[[battery.display]]
+threshold = 20
+#style = "bold red"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+jirm-blue = "#586BE7"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
